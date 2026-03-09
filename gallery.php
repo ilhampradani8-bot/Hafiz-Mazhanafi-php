@@ -137,6 +137,7 @@ include 'components/header.php';
 
 <script>
     // --- DATA MOBIL (Diinjeksi dari PHP) ---
+    // --- DATA MOBIL (Diinjeksi dari PHP & Dilengkapi) ---
     const carData = [
         { 
             img: "lbx-default.png", 
@@ -163,10 +164,32 @@ include 'components/header.php';
             name: "<?= $t['car_4_name'] ?>", tag: "<?= $t['car_4_tag'] ?>", desc: "<?= $t['car_4_desc'] ?>", 
             engine: "<?= $t['car_4_engine'] ?>", power: "<?= $t['car_4_power'] ?>"
         },
+        // --- UPDATE: ES 250 (Gambar tetap pakai es300h) ---
         { 
-            img: "lbx-default.png", 
-            name: "<?= $t['car_5_name'] ?>", tag: "<?= $t['car_5_tag'] ?>", desc: "<?= $t['car_5_desc'] ?>", 
-            engine: "<?= $t['car_5_engine'] ?>", power: "<?= $t['car_5_power'] ?>"
+            img: "lexus-es300h.png", 
+            name: "Lexus ES 250", // Teks nama diubah paksa ke ES 250
+            tag: "<?= isset($t['car_5_tag']) ? $t['car_5_tag'] : 'Luxury Sedan' ?>", 
+            desc: "<?= isset($t['car_5_desc']) ? $t['car_5_desc'] : 'A new level of refined elegance and unparalleled comfort.' ?>", 
+            engine: "<?= isset($t['car_5_engine']) ? $t['car_5_engine'] : '2.5L 4-Cylinder' ?>", 
+            power: "<?= isset($t['car_5_power']) ? $t['car_5_power'] : '204 HP' ?>"
+        },
+        // --- TAMBAHAN: LM 500h ---
+        { 
+            img: "lm500h.png", // Ganti jika nama file fotomu berbeda
+            name: "<?= isset($t['car_6_name']) ? $t['car_6_name'] : 'Lexus LM 500h' ?>", 
+            tag: "<?= isset($t['car_6_tag']) ? $t['car_6_tag'] : 'Luxury Mover' ?>", 
+            desc: "<?= isset($t['car_6_desc']) ? $t['car_6_desc'] : 'Experience ultimate chauffeur-driven luxury and spaciousness.' ?>", 
+            engine: "<?= isset($t['car_6_engine']) ? $t['car_6_engine'] : '2.4L Turbo Hybrid' ?>", 
+            power: "<?= isset($t['car_6_power']) ? $t['car_6_power'] : '366 HP' ?>"
+        },
+        // --- TAMBAHAN: GX 550 ---
+        { 
+            img: "gx550.png", // Ganti jika nama file fotomu berbeda
+            name: "<?= isset($t['car_7_name']) ? $t['car_7_name'] : 'Lexus GX 550' ?>", 
+            tag: "<?= isset($t['car_7_tag']) ? $t['car_7_tag'] : 'Luxury SUV' ?>", 
+            desc: "<?= isset($t['car_7_desc']) ? $t['car_7_desc'] : 'Go anywhere in absolute luxury and rugged capability.' ?>", 
+            engine: "<?= isset($t['car_7_engine']) ? $t['car_7_engine'] : '3.4L V6 Twin-Turbo' ?>", 
+            power: "<?= isset($t['car_7_power']) ? $t['car_7_power'] : '349 HP' ?>"
         }
     ];
 

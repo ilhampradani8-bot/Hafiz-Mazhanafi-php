@@ -150,13 +150,24 @@ include 'components/header.php';
 <script>
     // --- DATA PENGALAMAN (DIAMBIL DARI PHP) ---
     // Perhatikan: Kita echo variabel PHP $t[...] langsung ke dalam string JS
+    // --- DATA PENGALAMAN (DIAMBIL DARI PHP) ---
+    // Urutan dari yang terbaru (Lexus) ke yang terlama
+    // --- DATA PENGALAMAN (DIAMBIL DARI PHP) ---
+    // Urutan dari yang terbaru (Lexus) ke yang terlama
     const experiences = [
+        { 
+            img: "lexus-logo-1989.png", // Nama logo diupdate
+            role: "Sales Advisor",
+            company: "Lexus Malaysia",
+            year: "08/2025 – Present",
+            desc: `<?= isset($t['job_lexus_desc']) ? $t['job_lexus_desc'] : "<li>Engaging and converting leads through showroom visits, digital platforms, and corporate networking.</li><li>Managing end-to-end customer journey from consultation and test drive to vehicle delivery.</li><li>Coordinating with banks and internal teams for financing, insurance, and documentation processes.</li>" ?>`
+        },
         { 
             img: "logo-bmw.png", 
             role: "Sales Advisor",
             company: "BMW Millennium Welt KL North",
-            year: "2023 – Present",
-            desc: `<?= $t['job_bmw_desc'] ?>` // Ambil teks bahasa aktif
+            year: "10/2023 – 07/2024", // Tanggal diupdate
+            desc: `<?= $t['job_bmw_desc'] ?>`
         },
         { 
             img: "logo-honda.png", 
